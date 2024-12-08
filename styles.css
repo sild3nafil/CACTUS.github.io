@@ -1,0 +1,136 @@
+/* 基本樣式 */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* 容器樣式 */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 漢堡按鈕樣式 */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* 導航欄樣式 */
+.navigator {
+  background-color: white;
+  padding: 10px;
+  width: 160px;
+  min-height: 100vh;
+  position: fixed;
+}
+
+.navigator .logo {
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.navigator ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigator ul li {
+  margin: 15px 0;
+}
+
+.navigator ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.navigator ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* 內容區域樣式 */
+.content {
+  margin-left: 180px;
+  padding: 20px;
+  flex: 1;
+}
+
+/* 區域樣式 */
+section {
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+/* 圖片庫樣式 */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.image-gallery img {
+  width: 100%;
+  max-width: 600px;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* 左側滑入效果 */
+.slide-in.left {
+  transform: translateX(-100%);
+}
+
+/* 右側滑入效果 */
+.slide-in.right {
+  transform: translateX(100%);
+}
+
+/* 滑入效果激活狀態 */
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+
+  .navigator {
+    display: none;
+    width: 100%;
+    position: relative;
+    min-height: auto;
+  }
+
+  .navigator.open {
+    display: block;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
