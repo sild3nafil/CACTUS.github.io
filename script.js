@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navigator = document.querySelector(".navigator");
   
     hamburger.addEventListener("click", () => {
-      navigator.classList.toggle("open");
+      navigator.classList.toggle("active");
     });
   
     // 滾動觸發圖片滑入效果

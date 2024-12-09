@@ -39,6 +39,16 @@ body, html {
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
+  /*text-align: center;*/
+  margin-bottom: 20px;
+  
+}
+
+.navigator p {
+  color: gray;
+  font-size: 0.5em;
+  font-weight: bold;
+  text-align: center;
   margin-bottom: 20px;
   
 }
@@ -101,13 +111,19 @@ section {
 
 /* 右側滑入效果 */
 .slide-in.right {
-  transform: translateX(100%);
+  transform: translateX(0%);
 }
 
 /* 滑入效果激活狀態 */
 .slide-in.active {
   opacity: 1;
   transform: translateX(0);
+}
+
+.center-box {
+  margin: 0 auto; /* 左右自動邊距 */
+  background-color: lightblue;
+  text-align: center;
 }
 
 /* 響應式設計 */
@@ -129,8 +145,25 @@ section {
     display: block;
   }
 
+  .navigator.active {
+    display: block;
+    animation: slideDown 0.5s ease forwards;
+  }
+
   .content {
     margin-left: 0;
     margin-top: 0;
+  }
+}
+
+/* 滑下來的動畫 */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
