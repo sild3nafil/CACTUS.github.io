@@ -82,6 +82,12 @@ body, html {
   flex: 1;
 }
 
+.content footer{
+  text-align: center;
+  color: grey;
+  font-size: 0.25em;
+}
+
 /* 區域樣式 */
 section {
   min-height: 100vh;
